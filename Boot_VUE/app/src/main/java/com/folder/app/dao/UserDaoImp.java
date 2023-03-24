@@ -20,17 +20,17 @@ public class UserDaoImp implements UserDao {
 
   @Override
   public int editById(UserDTO uDto) {
-    return 0;
+    return uMapper.editById(uDto);
   }
 
   @Override
   public int delete(int no) {
-    return 0;
+    return uMapper.delete(no);
   }
 
   @Override
   public int save(UserDTO uDto){
-    return 0;
+    return uMapper.save(uDto);
   }
 
 }

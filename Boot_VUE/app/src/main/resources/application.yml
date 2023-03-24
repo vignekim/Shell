@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    group:
+      dev:
+        - developer_database
+        - commons
+      prod:
+        - production_database
+        - commons
+---
+server:
+  port: 8080
+spring:
+  config:
+    activate:
+      on-profile: commons
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: folder
+    password: 1234
+mybatis:
+  mapper-locations: classpath:sql/**.xml
+tomcat:
+  ajp:
+    address: 0.0.0.0
+    protocol: AJP/1.3
+    port: 8009
+    enabled: true
+    secret: tomcatKey2
+
+---
+spring:
+  config:
+    activate:
+      on-profile: developer_database
+  datasource:
+    url: jdbc:mariadb://localhost:23306/edu
+---
+spring:
+  config:
+    activate:
+      on-profile: production_database
+  datasource:
+    url: jdbc:mariadb://db:3306/edu

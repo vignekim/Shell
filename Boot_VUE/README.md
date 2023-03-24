@@ -33,3 +33,11 @@ cd app
 ###### 3. Axios 사용하기 [CROS Policy]
 
 [![Video Label](http://img.youtube.com/vi/veDJeJe5Xck/0.jpg)](https://youtu.be/veDJeJe5Xck)
+
+###### 4. SpringBoot 기능 구현하기 1부 [MVC패턴]
+
+[![Video Label](http://img.youtube.com/vi/_OzpyzFd1d0/0.jpg)](https://youtu.be/_OzpyzFd1d0)
+
+###### 4. SpringBoot 기능 구현하기 2부 [MVC패턴]
+
+[![Video Label](http://img.youtube.com/vi/-FSmrUACdpo/0.jpg)](https://youtu.be/-FSmrUACdpo)

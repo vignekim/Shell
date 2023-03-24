@@ -8,6 +8,16 @@
 
 <script>
 import axios from 'axios'
+const uForm = {
+  no: 1,
+  name: '테스트',
+  email: 'test@email.com',
+  pwd: '1234',
+  gender: true
+}
+const params = {
+  params: { no: 1 }
+}
 export default {
   name: 'HomeView',
   methods: {

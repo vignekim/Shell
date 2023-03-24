@@ -31,19 +31,43 @@ public class UserServiceImp implements UserService {
 
   @Override
   public ResultDTO editById(UserDTO uDto) {
-
+    rDto = new ResultDTO();
+    int state = uDao.editById(uDto);
+    if(state == 1) {
+      rDto.setState(true);
+      rDto.setMessage("사용자 수정이 성공 하였습니다.");
+    } else {
+      rDto.setState(false);
+      rDto.setMessage("사용자 수정이 실패 하였습니다.");
+    }
     return rDto;
   }
 
   @Override
   public ResultDTO delete(int no) {
-
+    rDto = new ResultDTO();
+    int state = uDao.delete(no);
+    if(state == 1) {
+      rDto.setState(true);
+      rDto.setMessage("사용자 삭제가 성공 하였습니다.");
+    } else {
+      rDto.setState(false);
+      rDto.setMessage("사용자 삭제가 실패 하였습니다.");
+    }
     return rDto;
   }
 
   @Override
   public ResultDTO save(UserDTO uDto){
-
+    rDto = new ResultDTO();
+    int state = uDao.save(uDto);
+    if(state == 1) {
+      rDto.setState(true);
+      rDto.setMessage("사용자 생성이 성공 하였습니다.");
+    } else {
+      rDto.setState(false);
+      rDto.setMessage("사용자 생성이 실패 하였습니다.");
+    }
     return rDto;
   }
 

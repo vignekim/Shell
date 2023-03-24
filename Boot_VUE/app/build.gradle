@@ -28,8 +28,20 @@ dependencies {
 	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat:3.0.4'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+bootRun {
+    String activeProfile = System.properties['spring.profiles.active']
+    systemProperty "spring.profiles.active", activeProfile
+}
+
+bootJar{
+    archivesBaseName = 'App'
+    archiveFileName = 'app.jar'
+    archiveVersion = "0.0.1"
 }

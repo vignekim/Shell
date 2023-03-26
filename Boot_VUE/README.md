@@ -41,3 +41,11 @@ cd app
 ###### 4. SpringBoot 기능 구현하기 2부 [MVC패턴]
 
 [![Video Label](http://img.youtube.com/vi/-FSmrUACdpo/0.jpg)](https://youtu.be/-FSmrUACdpo)
+
+###### 5. Vue 이벤트 1부 [ListView Event]
+
+[![Video Label](http://img.youtube.com/vi/0EA3vWoszyM/0.jpg)](https://youtu.be/0EA3vWoszyM)
+
+###### 6. Vue 이벤트 2부 [Vuex Store]
+
+[![Video Label](http://img.youtube.com/vi/im-fzWGZilo/0.jpg)](https://youtu.be/im-fzWGZilo)

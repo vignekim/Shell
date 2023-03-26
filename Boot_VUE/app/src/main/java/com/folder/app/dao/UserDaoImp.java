@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.folder.app.dto.ResultDTO;
 import com.folder.app.dto.UserDTO;
 import com.folder.app.mapper.UserMapper;
 
@@ -29,8 +30,17 @@ public class UserDaoImp implements UserDao {
   }
 
   @Override
-  public int save(UserDTO uDto){
-    return uMapper.save(uDto);
+  public ResultDTO save(UserDTO uDto){
+    ResultDTO result = new ResultDTO();
+    int state = uMapper.save(uDto);
+    if(state == 1) {
+      System.out.println(uDto);
+      result.setState(true);
+      result.setResult(uDto);
+    } else {
+      result.setState(false);
+    }
+    return result;
   }
 
 }

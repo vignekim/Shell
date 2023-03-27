@@ -25,7 +25,6 @@
 
 <script>
 import axios from 'axios'
-import store from '@/store'
 export default {
   name: 'ListView',
   data() {
@@ -34,7 +33,7 @@ export default {
     }
   },
   created() {
-    console.log(store)
+    console.log('List', this.$store.state.user)
     this.getData()
   },
   methods: {
@@ -45,11 +44,15 @@ export default {
         .catch((error) => console.log(error))
     },
     href(row) {
-      // query  > http://localhost:8080/user/findById?name=사용자&pwd=1
-      // params > http://localhost:8080/user/findById/사용자/1
+      // query  > http://localhost:8800/user/findById?name=사용자&pwd=1
+      // params > http://localhost:8800/user/findById/사용자/1
       // index.js > path: '/user/findById/:name/:pwd'
-      store.commit('setUser', row)
+      this.$store.commit('setUser', row)
+      sessionStorage.setItem('setUser', this.base64(row))
       this.$router.push({ name: 'SelectView' })
+    },
+    base64(user) {
+      return window.btoa(encodeURIComponent(JSON.stringify(user)))
     }
   }
 }

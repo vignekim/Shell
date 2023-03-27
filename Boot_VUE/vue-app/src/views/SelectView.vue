@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'SelectView',
   data() {
@@ -53,13 +54,28 @@ export default {
     }
   },
   created() {
-    console.log(this.$store.state.user)
     this.result = this.$store.state.user
   },
   methods: {
-    edit() {},
-    del() {},
+    edit() {
+      this.$router.push({ name: 'UpdateView' })
+    },
+    del() {
+      const params = { params: { no: this.result.no } }
+      axios
+        .delete(process.env.VUE_APP_BASEURL + '/delete', params)
+        .then((res) => {
+          if (res.data.state) {
+            this.cancel()
+          } else {
+            alert(res.data.message)
+          }
+        })
+        .catch((err) => console.log(err))
+    },
     cancel() {
+      this.$store.commit('setUser', {})
+      sessionStorage.removeItem('setUser')
       this.$router.push({ name: 'ListView' })
     }
   }

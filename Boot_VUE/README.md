@@ -49,3 +49,7 @@ cd app
 ###### 6. Vue 이벤트 2부 [Vuex Store]
 
 [![Video Label](http://img.youtube.com/vi/im-fzWGZilo/0.jpg)](https://youtu.be/im-fzWGZilo)
+
+###### 7. Vue 이벤트 3부 [Update & Delete Event]
+
+[![Video Label](http://img.youtube.com/vi/LvDZMY0rwXk/0.jpg)](https://youtu.be/LvDZMY0rwXk)

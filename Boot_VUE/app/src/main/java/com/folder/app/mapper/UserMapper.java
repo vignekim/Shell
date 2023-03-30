@@ -14,7 +14,7 @@ import com.folder.app.dto.UserDTO;
 @Mapper
 public interface UserMapper {
 
-  @Select("select * from user3 where del = false group by no desc")
+  @Select("select no, name, email, pwd, gender, del, date_format(regDate, '%Y-%m-%d %T' ) as regDate from user3 where del = false group by no desc")
   public List<UserDTO> findAll();
 
   @Update("update user3 set name = #{name}, pwd = #{pwd}, gender = #{gender} where no = #{no}")

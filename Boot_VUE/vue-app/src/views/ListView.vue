@@ -16,7 +16,7 @@
         <tr class="cursor-pointer" v-for="row in result" v-bind:key="row.no" v-on:click="href(row)">
           <td>{{ row.name }}</td>
           <td>{{ row.email }}</td>
-          <td>{{ row.regDate }}</td>
+          <td>{{ dateTime(row.regDate) }}</td>
         </tr>
       </tbody>
     </table>
@@ -25,6 +25,7 @@
 
 <script>
 import axios from 'axios'
+import dayjs from 'dayjs'
 export default {
   name: 'ListView',
   data() {
@@ -53,6 +54,9 @@ export default {
     },
     base64(user) {
       return window.btoa(encodeURIComponent(JSON.stringify(user)))
+    },
+    dateTime(value) {
+      return dayjs(value).format('YYYY-MM-DD HH:mm:ss')
     }
   }
 }

@@ -1,0 +1,55 @@
+services:
+  db:
+    image: mariadb:latest
+    container_name: db
+    restart: always
+    ports:
+      - 23306:3306
+    networks:
+      myNet:
+        ipv4_address: 192.168.100.1
+    volumes:
+      - ./mariadb/conf.d:/etc/mysql/conf.d:ro
+      - ./mariadb/data:/var/lib/mysql:rw
+      - ./mariadb/initdb.d:/docker-entrypoint-initdb.d:ro
+    environment:
+      - MYSQL_HOST=localhost
+      - MYSQL_PORT=3306
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=edu
+      - MYSQL_USER=folder
+      - MYSQL_PASSWORD=1234
+      - TZ=Asia/Seoul
+  vue:
+    build:
+      context: vue-app
+      dockerfile: dockerfile
+    container_name: vue
+    restart: always
+    networks:
+      myNet:
+        ipv4_address: 192.168.100.2
+    ports:
+      - 80:80
+  boot:
+    build:
+      context: app
+      dockerfile: dockerfile
+    container_name: boot
+    depends_on:
+      - db
+    restart: always
+    networks:
+      myNet:
+        ipv4_address: 192.168.100.3
+    links:
+      - db
+    ports:
+      - 8080:8080
+networks:
+  myNet:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.100.0/24
+          gateway: 192.168.100.254

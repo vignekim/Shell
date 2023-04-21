@@ -73,48 +73,18 @@ docker network ls
 docker network inspect boot_vue_myNet
 ```
 
+----
 ### YouTube Link
 
-###### 1. 프로젝트 만들기
+> * [1. 프로젝트 만들기](https://youtu.be/povDCmh3BfM)
+> * [2. Vue화면 설정하기 (Router)](https://youtu.be/PACW_Wmafns)
+> * [3. Axios 사용하기 (CROS Policy)](https://youtu.be/veDJeJe5Xck)
+> * [4. SpringBoot 기능 구현하기 1부 (MVC패턴)](https://youtu.be/_OzpyzFd1d0)
+> * [5. SpringBoot 기능 구현하기 2부 (MVC패턴)](https://youtu.be/-FSmrUACdpo)
+> * [6. Vue 이벤트 1부 (ListView Event)](https://youtu.be/0EA3vWoszyM)
+> * [7. Vue 이벤트 2부 (Vuex Store)](https://youtu.be/im-fzWGZilo)
+> * [8. Vue 이벤트 3부 (Update & Delete Event)](https://youtu.be/LvDZMY0rwXk)
+> * [9. Vue 이벤트 4부 (User Create)](https://youtu.be/glk_V6zJI0o)
+> * [10. Vue 이벤트 5부 (Session Storage)](https://youtu.be/9XCN-ugG0EI)
+> * [11. 프로젝트 배포 (Docker Compose Build)](https://youtu.be/cMmk1Gltwkw)
 
-[![Video Label](http://img.youtube.com/vi/povDCmh3BfM/0.jpg)](https://youtu.be/povDCmh3BfM)
-
-###### 2. Vue화면 설정하기 (Router)
-
-[![Video Label](http://img.youtube.com/vi/PACW_Wmafns/0.jpg)](https://youtu.be/PACW_Wmafns)
-
-###### 3. Axios 사용하기 [CROS Policy]
-
-[![Video Label](http://img.youtube.com/vi/veDJeJe5Xck/0.jpg)](https://youtu.be/veDJeJe5Xck)
-
-###### 4. SpringBoot 기능 구현하기 1부 [MVC패턴]
-
-[![Video Label](http://img.youtube.com/vi/_OzpyzFd1d0/0.jpg)](https://youtu.be/_OzpyzFd1d0)
-
-###### 5. SpringBoot 기능 구현하기 2부 [MVC패턴]
-
-[![Video Label](http://img.youtube.com/vi/-FSmrUACdpo/0.jpg)](https://youtu.be/-FSmrUACdpo)
-
-###### 6. Vue 이벤트 1부 [ListView Event]
-
-[![Video Label](http://img.youtube.com/vi/0EA3vWoszyM/0.jpg)](https://youtu.be/0EA3vWoszyM)
-
-###### 7. Vue 이벤트 2부 [Vuex Store]
-
-[![Video Label](http://img.youtube.com/vi/im-fzWGZilo/0.jpg)](https://youtu.be/im-fzWGZilo)
-
-###### 8. Vue 이벤트 3부 [Update & Delete Event]
-
-[![Video Label](http://img.youtube.com/vi/LvDZMY0rwXk/0.jpg)](https://youtu.be/LvDZMY0rwXk)
-
-###### 9. Vue 이벤트 4부 [User Create]
-
-[![Video Label](http://img.youtube.com/vi/glk_V6zJI0o/0.jpg)](https://youtu.be/glk_V6zJI0o)
-
-###### 10. Vue 이벤트 5부 [Session Storage]
-
-[![Video Label](http://img.youtube.com/vi/9XCN-ugG0EI/0.jpg)](https://youtu.be/9XCN-ugG0EI)
-
-###### 11. 프로젝트 배포 [Docker Compose Build]
-
-[![Video Label](http://img.youtube.com/vi/cMmk1Gltwkw/0.jpg)](https://youtu.be/cMmk1Gltwkw)
